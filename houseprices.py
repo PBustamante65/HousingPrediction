@@ -24,8 +24,7 @@ print(sys.path)
 
 #full_pipeline = joblib.load('/Volumes/TOSHIBA EXT/Maestria/Programs/Machine Learning/End-to-End Housing/exports/full_pipeline.pkl')
 
-pipiline_path = '/workspaces/HousingPrediction/exports/full_pipeline.pkl'
-
+pipiline_path = 'exports/full_pipeline.pkl'
 with open(pipiline_path, 'rb') as file1:
     print(file1.read(100))  
 try:
@@ -34,7 +33,7 @@ try:
 except Exception as e:
     print("Failed to load pipeline:", e)
 
-model_path = '/workspaces/HousingPrediction/exports/model.pkl'
+model_path = 'exports/model.pkl'
 
 with open(model_path, 'rb') as file:
     print(file.read(100))  
