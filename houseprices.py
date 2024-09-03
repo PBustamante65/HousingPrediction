@@ -55,7 +55,7 @@ col1, col2 = st.columns(2)
 
 
 with col1:
-    Unnamed = st.number_input('Enter a Unnamed (0 to 21000)', min_value=0.0, max_value=21000.0, value=0.0, step=1.0)
+    #Unnamed = st.number_input('Enter a Unnamed (0 to 21000)', min_value=0.0, max_value=21000.0, value=0.0, step=1.0)
     longitude = st.number_input('Enter a longitude (-125 to -110)', min_value=-125.0, max_value=-110.0, value=-120.0, step=1.0)
     latitude = st.number_input('Enter a latitude (30 to 45)', min_value=30.0, max_value=45.0, value=32.0, step=1.0)
     housing_median_age = st.number_input('Enter a housing median age (1 to 100)', min_value=1.0, max_value=100.0, value=35.0, step=1.0, format= '%.0f')
@@ -71,7 +71,7 @@ ocean_proximity = st.selectbox('Enter a ocean proximity', ('<1H OCEAN', 'INLAND'
 if st.button('Predict'):
     input_data = pd.DataFrame(
     
-        {'Unnamed: 0': [Unnamed], 'longitude': [longitude], 'latitude': [latitude], 'housing_median_age': [housing_median_age],
+        {'longitude': [longitude], 'latitude': [latitude], 'housing_median_age': [housing_median_age],
          'total_rooms': [total_rooms], 'total_bedrooms': [total_bedrooms], 'population': [population],
          'households': [households], 'median_income': [median_income], 'ocean_proximity': [ocean_proximity]},
          index=[0]
